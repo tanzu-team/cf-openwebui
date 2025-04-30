@@ -1,0 +1,20 @@
+applications:
+- name: chat
+  disk_quota: 6G
+  env:
+    WEBUI_AUTH: "True"
+    ENABLE_SIGNUP: "True"
+    WEBUI_SECRET_KEY: "0123456789abcdef"
+    WEBUI_NAME: Tanzu Platform
+    ADMIN_EMAIL: "user@broadcom.com"
+  instances: 1
+  memory: 1G
+  stack: cflinuxfs4
+  services:
+  - azure-gpt-4o
+  - azure-gpt-4o-mini
+  - gpt-4o
+  - gpt-4o-mini
+  - llama3.2
+  - llama3.2:1b
+  - o3-mini
